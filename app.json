@@ -1,0 +1,48 @@
+{
+      "name": "Null WhisperBot",
+      "description": "A TelegramBot to send messages secretly, by github.com/AMANTYA1",
+      "keywords": [
+         "telegram",
+         "advance",
+         "whisper",
+         "bot",
+         "Null-Coder"
+      ],
+    
+   "logo":    "https://telegra.ph/file/e31709819ce778990deb2.jpg",  
+   "repository": "https://github.com/AMANTYA1/WhisperBot",
+   "addons": [
+          {
+         "options": {
+            "version": "12"
+         },
+         "plan": "heroku-postgresql"
+      }
+   ],
+   "env": {
+      "TOKEN": {
+         "description": "Your bot token, get one from @BotFather on Telegram.",
+         "required": true,
+         "value": ""
+      },
+      "BOT_USERNAME": {
+         "description": "Username of your bot with @, example: `@WhisperNRobot`.",
+         "value": "@WhisperNRobot"
+      },
+      "BOT_NAME": {
+         "description": "Name of your bot, example: `Whisper Bot`",
+         "value": "WhisperBot"
+      }
+    },
+    "buildpacks": [
+     {
+      "url": "heroku/python"
+     }
+    ],
+    "formation": {
+    "worker": {
+      "quantity": 1,
+      "size": "free"
+    }
+  }
+}
